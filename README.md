@@ -1,6 +1,6 @@
 <div align="center">
 
-# [FG 2024] Hyp-OC : Hyperbolic One Class Classification <br> for Face Anti-Spoofing
+# [FG 2024] Hyp-OC : Hyperbolic One Class Classification for Face Anti-Spoofing
 
 [Kartik Narayan*](https://kartik-3004.github.io/portfolio/) &emsp; [Vishal M. Patel](https://engineering.jhu.edu/faculty/vishal-patel/)  
 
