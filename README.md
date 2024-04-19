@@ -25,7 +25,7 @@ effectively stripping away identity information. Such disruption of features hel
 3️⃣ We provide a hyperbolic formation of cross-entropy loss (Hyp-CE), that uses hyperbolic softmax logits and penalizes the network for every misclassification.<br>
 
 <p align="center" width="100%">
-  <img src='assets/visual_abstract.png' height="75%" width="75%" align="center">
+  <img src='assets/visual_abstract.png' height="75%" width="75%">
 </p>
 
 > **<p align="justify"> Abstract:** *Face recognition technology has become an integral part of modern security systems
@@ -45,8 +45,62 @@ effectively stripping away identity information. Such disruption of features hel
 # :rocket: News
 - [04/20/2024] 🔥 We release Hyp-OC.
 
+# Framework
+<p align="center" width="100%">
+  <img src='assets/framework.png'>
+</p>
+Overview of the proposed pipeline: Hyp-OC. $`E_1(x)`$ extracts the facial features. The facial features are used to estimate the 
+mean of Gaussian distribution utilized to sample pseudo-negative points. The real features and pseudo-negative features are then concatenated 
+and passed to \(E_2(x)\) for dimensionality reduction. The low-dimension features are mapped to Poincaré Ball using *exponential map*. 
+The training objective is to minimize the summation of the proposed loss functions \(\mathcal{L}_{Hyp-PC}\) and \(\mathcal{L}_{Hyp-CE}\). 
+The result is a separating *gyroplane* beneficial for one-class face anti-spoofing.
+
+
 # Installation
 ```bash
 conda env create --file environment.yml
 conda activate hypoc
 ```
+
+# Download Models
+The models can be downloaded manually from [HuggingFace](https://huggingface.co/kartiknarayan/facexformer) or using python:
+```python
+from huggingface_hub import hf_hub_download
+
+hf_hub_download(repo_id="kartiknarayan/facexformer", filename="ckpts/model.pt", local_dir="./")
+```
+The directory structure should finally be:
+
+```
+  . ── facexformer ──┌── ckpts/model.pt
+                     ├── network
+                     └── inference.py                    
+```
+# Usage
+
+Download trained model from [HuggingFace](https://huggingface.co/kartiknarayan/facexformer) and ensure the directory structure is correct.<br>
+For demo purposes, we have released the code for inference on a single image.<br>
+It supports a variety of tasks which can be prompted by changing the "task" argument. 
+
+```python
+python inference.py --model_path ckpts/model.pt \
+                    --image_path image.png \
+                    --results_path results \
+                    --task parsing \
+                    --gpu_num 0
+
+-- task = [parsing, landmarks, headpose, attributes, age_gender_race, visibility]
+```
+The output is stored in the specified "results_path".
+
+<img src='assets/viz_inthewild.png'>
+
+
+## Citation
+If you find Hyp-OC useful for your research, please consider citing us:
+
+```bibtex
+Coming Soon ...
+```
+## Contact
+If you have any questions, please create an issue on this repository or contact at knaraya4@jhu.edu
