@@ -91,10 +91,8 @@ python inference.py --model_path ckpts/model.pt \
 
 -- task = [parsing, landmarks, headpose, attributes, age_gender_race, visibility]
 ```
-The output is stored in the specified "results_path".
-
-<img src='assets/viz_inthewild.png'>
-
+The trained models are stored in the specified "save_root".<br>
+The training logs can be seen at "log_root"
 
 ## Citation
 If you find Hyp-OC useful for your research, please consider citing us:
