@@ -24,7 +24,9 @@ Hyp-OC, is the first work exploring hyperbolic embeddings for one-class face ant
 effectively stripping away identity information. Such disruption of features helps to learn better feature representations for the FAS task.<br>
 3️⃣ We provide a hyperbolic formation of cross-entropy loss (Hyp-CE), that uses hyperbolic softmax logits and penalizes the network for every misclassification.<br>
 
-<img src='assets/visual_abstract.png' height=720 width=720>
+<p align="center" width="100%">
+  <img src='assets/visual_abstract.png' height="75%" width="75%" align="center">
+</p>
 
 > **<p align="justify"> Abstract:** *Face recognition technology has become an integral part of modern security systems
 > and user authentication processes. However, these systems are vulnerable to spoofing attacks and can easily be circumvented.
