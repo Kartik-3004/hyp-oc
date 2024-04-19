@@ -14,3 +14,12 @@ Johns Hopkins University
 
 Official implementation of **[Hyp-OC : Hyperbolic One Class Classification for Face Anti-Spoofing]()**.
 <hr />
+
+## Highlights
+
+Hyp-OC, is the first work exploring hyperbolic embeddings for one-class face anti-spoofing (OC-FAS).
+
+1️⃣ We show that using hyperbolic space helps learn a better decision boundary than the Euclidean counterpart, boosting one-class face anti-spoofing performance.<br>
+2️⃣ We propose Hyperbolic Pairwise Confusion Loss (Hyp-PC), that operates on the hyperbolic space inducing confusion within the hyperbolic feature space,
+effectively stripping away identity information. Such disruption of features helps to learn better feature representations for the FAS task.<br>
+3️⃣ We provide a hyperbolic formation of cross-entropy loss (Hyp-CE), that uses hyperbolic softmax logits and penalizes the network for every misclassification.<br>
