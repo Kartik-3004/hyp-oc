@@ -62,20 +62,40 @@ conda env create --file environment.yml
 conda activate hypoc
 ```
 
-# Download Models
-The models can be downloaded manually from [HuggingFace](https://huggingface.co/kartiknarayan/facexformer) or using python:
+# Download Data
+The datasets can be downloaded from their respective webpages or by mailing the authors:<br>
+1. [Idiap Replay Attack](https://www.idiap.ch/en/scientific-research/data/replayattack)<br>
+2. [MSU MFSD](https://sites.google.com/site/huhanhomepage/datasetcode)<br>
+3. [CASIA MFSD](https://ieeexplore.ieee.org/document/6199754)<br>
+4. [OULU-NPU](https://sites.google.com/site/oulunpudatabase/)<br>
+5. [ROSEYoutu](https://rose1.ntu.edu.sg/dataset/faceLivenessDetection/)<br>
+
+Arrange the dataset in the following manner:
 ```python
-from huggingface_hub import hf_hub_download
-
-hf_hub_download(repo_id="kartiknarayan/facexformer", filename="ckpts/model.pt", local_dir="./")
+.
+├── datasets
+│   ├── ReplayAttack
+│   │   ├── train_frames
+│   │   ├── test_frames
+│   │   ├── devel_frames
+│   ├── MSU MFSD
+│   │   ├── train
+│   │   ├── test
+│   ├── CASIA MFSD
+│   │   ├── train
+│   │   ├── test
+│   ├── OULU_NPU
+│   │   ├── Train_frames
+│   │   ├── Test_frames
+│   │   ├── Dev_frames
+│   │   ├── Protocols
+│   ├── ROSEYoutu
+│   │   ├── client
+│   │   │   ├── rgb
+│   │   │   │   ├── adaptation
+│   │   │   │   ├── test
 ```
-The directory structure should finally be:
-
-```
-  . ── facexformer ──┌── ckpts/model.pt
-                     ├── network
-                     └── inference.py                    
-```
+NOTE: The train, test and eval splits are provided in the /data/ folder.
 # Usage
 
 Download trained model from [HuggingFace](https://huggingface.co/kartiknarayan/facexformer) and ensure the directory structure is correct.<br>
