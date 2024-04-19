@@ -49,11 +49,11 @@ effectively stripping away identity information. Such disruption of features hel
 <p align="center" width="100%">
   <img src='assets/framework.png'>
 </p>
-Overview of the proposed pipeline: Hyp-OC. $`E_1(x)`$ extracts the facial features. The facial features are used to estimate the 
-mean of Gaussian distribution utilized to sample pseudo-negative points. The real features and pseudo-negative features are then concatenated 
-and passed to \(E_2(x)\) for dimensionality reduction. The low-dimension features are mapped to Poincaré Ball using *exponential map*. 
-The training objective is to minimize the summation of the proposed loss functions \(\mathcal{L}_{Hyp-PC}\) and \(\mathcal{L}_{Hyp-CE}\). 
-The result is a separating *gyroplane* beneficial for one-class face anti-spoofing.
+Overview of the proposed pipeline: Hyp-OC. The encoder extracts facial features which are used to estimate the mean of Gaussian 
+distribution utilized to sample pseudo-negative points. The real features and pseudo-negative features are then concatenated 
+and passed to FCNN for dimensionality reduction. The low-dimension features are mapped to Poincaré Ball using *exponential map*. 
+The training objective is to minimize the summation of the proposed loss functions Hyp-PC} and Hyp-CE. The result is a separating 
+*gyroplane* beneficial for one-class face anti-spoofing.
 
 
 # Installation
