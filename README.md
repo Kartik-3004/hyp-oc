@@ -7,7 +7,7 @@
 
 Johns Hopkins University
 
-<a href=''><img src='https://img.shields.io/badge/Project-Page-blue'></a>
+<a href='https://kartik-3004.github.io/hyp-oc/'><img src='https://img.shields.io/badge/Project-Page-blue'></a>
 <a href=''><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
 <a href='https://huggingface.co/kartiknarayan/hyp-oc'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange'></a>
 
