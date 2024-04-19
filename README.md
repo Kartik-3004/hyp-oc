@@ -96,23 +96,67 @@ Arrange the dataset in the following manner:
 │   │   │   │   ├── test
 ```
 NOTE: The train, test and eval splits are provided in the /data/ folder.
-# Usage
 
-Download trained model from [HuggingFace](https://huggingface.co/kartiknarayan/facexformer) and ensure the directory structure is correct.<br>
-For demo purposes, we have released the code for inference on a single image.<br>
-It supports a variety of tasks which can be prompted by changing the "task" argument. 
-
+# Download Pre-trained weights
+The pre-traind model can be downloaded manually from [HuggingFace](https://huggingface.co/kartiknarayan/hyp-oc) or using python:
 ```python
-python inference.py --model_path ckpts/model.pt \
-                    --image_path image.png \
-                    --results_path results \
-                    --task parsing \
-                    --gpu_num 0
+from huggingface_hub import hf_hub_download
 
--- task = [parsing, landmarks, headpose, attributes, age_gender_race, visibility]
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="pretrained_weights/vgg_face_dag.pth", local_dir="./")
+```
+The directory structure should finally be:
+
+```
+  . ── hyp-oc ──┌── pretrained_weights/vgg_face_dag.pth
+                ├── data
+                ├── hyptorch
+                ├── config.py
+                ├── dataloader.py
+                ├── loss.py
+                ├── models.py
+                ├── statistics.py
+                ├── train.py
+                ├── test.py
+                └── utils.py                    
+```
+
+# Usage
+Download the pre-trained weights from [HuggingFace](https://huggingface.co/kartiknarayan/hyp-oc) and ensure the directory structure is correct.<br>
+
+### Training
+```python
+  python train.py \
+      --expt_name roseyoutu \
+      --dataset ROSEYoutu \
+      --device 0 \
+      --epochs 60 \
+      --batch_size_train 8 \
+      --batch_size_val 128 \
+      --val_check_after_epoch 1 \
+      --save_for_each_val_epoch True \
+      --optim_lr 1e-6 \
+      --optim_weight_decay 1e-6 \
+      --std_dev 1 \
+      --feature_dimension 4096 \
+      --alpha 0.8 \
+      --curvature 0.1
+
+# -- dataset = [ROSEYoutu, ReplayAttack, CASIA_MFSD, MSU_MFSD, OULU_NPU, OCI, OMI, OCM, ICM]
 ```
 The trained models are stored in the specified "save_root".<br>
 The training logs can be seen at "log_root"
+
+### Inference
+```python
+python test.py \
+    --source_dataset ReplayAttack \
+    --target_dataset MSU_MFSD \
+    --device 0 \
+    --curvature 0.1 \
+    --batch_size_test 32 \
+    --list replayattack
+```
+--list contains "," separated experiment names performed on the --source_dataset.
 
 ## Citation
 If you find Hyp-OC useful for your research, please consider citing us:
@@ -120,5 +164,8 @@ If you find Hyp-OC useful for your research, please consider citing us:
 ```bibtex
 Coming Soon ...
 ```
+## Acknowledgement
+The hyptorch module of the code is taken from [hyp_metric](https://github.com/htdt/hyp_metric) repository. We thank the authors for the same.
+
 ## Contact
 If you have any questions, please create an issue on this repository or contact at knaraya4@jhu.edu
