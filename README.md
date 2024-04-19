@@ -42,19 +42,18 @@ effectively stripping away identity information. Such disruption of features hel
 > extensive experiments on five benchmark datasets: Rose-Youtu, MSU-MFSD, CASIA-MFSD, Idiap Replay-Attack, and OULU-NPU, we
 > demonstrate that our method significantly outperforms the state-of-the-art, achieving better spoof detection performance.* </p>
 
-# :rocket: News
-- [04/20/2024] 🔥 We release Hyp-OC.
-
 # Framework
 <p align="center" width="100%">
   <img src='assets/framework.png'>
 </p>
 Overview of the proposed pipeline: Hyp-OC. The encoder extracts facial features which are used to estimate the mean of Gaussian 
 distribution utilized to sample pseudo-negative points. The real features and pseudo-negative features are then concatenated 
-and passed to FCNN for dimensionality reduction. The low-dimension features are mapped to Poincaré Ball using _exponential map_. 
+and passed to FCNN for dimensionality reduction. The low-dimension features are mapped to Poincaré Ball using *exponential map*. 
 The training objective is to minimize the summation of the proposed loss functions Hyp-PC and Hyp-CE. The result is a separating 
-_gyroplane_ beneficial for one-class face anti-spoofing.
+*gyroplane* beneficial for one-class face anti-spoofing.
 
+# :rocket: News
+- [04/20/2024] 🔥 We release Hyp-OC.
 
 # Installation
 ```bash
