@@ -81,6 +81,7 @@ dependencies:
     - scipy==1.10.1
     - threadpoolctl==3.2.0
     - tifffile==2023.7.10
+    - --extra-index-url https://download.pytorch.org/whl/cu113
     - torch==1.12.1+cu113
     - torchaudio==0.12.1+cu113
     - torchvision==0.13.1+cu113
