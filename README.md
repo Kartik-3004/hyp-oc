@@ -13,7 +13,7 @@ Johns Hopkins University
 
 </div>
 
-Official implementation of **[Hyp-OC : Hyperbolic One Class Classification for Face Anti-Spoofing]()**.
+Official implementation of **[Hyp-OC : Hyperbolic One Class Classification for Face Anti-Spoofing](https://kartik-3004.github.io/hyp-oc/)**.
 <hr />
 
 ## Highlights
