@@ -8,7 +8,7 @@ Johns Hopkins University
 
 <a href=''><img src='https://img.shields.io/badge/Project-Page-blue'></a>
 <a href=''><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
-<a href=''><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange'></a>
+<a href=''><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange'>https://huggingface.co/kartiknarayan/hyp-oc</a>
 
 </div>
 
@@ -25,7 +25,7 @@ effectively stripping away identity information. Such disruption of features hel
 3️⃣ We provide a hyperbolic formation of cross-entropy loss (Hyp-CE), that uses hyperbolic softmax logits and penalizes the network for every misclassification.<br>
 
 <p align="center" width="100%">
-  <img src='assets/visual_abstract.png' height="75%" width="75%">
+  <img src='docs/static/images/visual_abstract.png' height="75%" width="75%">
 </p>
 
 > **<p align="justify"> Abstract:** *Face recognition technology has become an integral part of modern security systems
@@ -44,7 +44,7 @@ effectively stripping away identity information. Such disruption of features hel
 
 # Framework
 <p align="center" width="100%">
-  <img src='assets/framework.png'>
+  <img src='docs/static/images/framework.png'>
 </p>
 Overview of the proposed pipeline: Hyp-OC. The encoder extracts facial features which are used to estimate the mean of Gaussian 
 distribution utilized to sample pseudo-negative points. The real features and pseudo-negative features are then concatenated 
