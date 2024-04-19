@@ -52,7 +52,7 @@ effectively stripping away identity information. Such disruption of features hel
 Overview of the proposed pipeline: Hyp-OC. The encoder extracts facial features which are used to estimate the mean of Gaussian 
 distribution utilized to sample pseudo-negative points. The real features and pseudo-negative features are then concatenated 
 and passed to FCNN for dimensionality reduction. The low-dimension features are mapped to Poincaré Ball using *exponential map*. 
-The training objective is to minimize the summation of the proposed loss functions Hyp-PC} and Hyp-CE. The result is a separating 
+The training objective is to minimize the summation of the proposed loss functions Hyp-PC and Hyp-CE. The result is a separating 
 *gyroplane* beneficial for one-class face anti-spoofing.
 
 
