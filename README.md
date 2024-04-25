@@ -8,7 +8,7 @@
 Johns Hopkins University
 
 <a href='https://kartik-3004.github.io/hyp-oc/'><img src='https://img.shields.io/badge/Project-Page-blue'></a>
-<a href=''><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
+<a href='https://arxiv.org/pdf/2404.14406.pdf'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
 <a href='https://huggingface.co/kartiknarayan/hyp-oc'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange'></a>
 
 </div>
@@ -162,7 +162,12 @@ python test.py \
 If you find Hyp-OC useful for your research, please consider citing us:
 
 ```bibtex
-Coming Soon ...
+@article{narayan2024hyp,
+  title={Hyp-OC: Hyperbolic One Class Classification for Face Anti-Spoofing},
+  author={Narayan, Kartik and Patel, Vishal M},
+  journal={arXiv preprint arXiv:2404.14406},
+  year={2024}
+}
 ```
 ## Acknowledgement
 The hyptorch module of the code is taken from [hyp_metric](https://github.com/htdt/hyp_metric) repository. We thank the authors for the same.
