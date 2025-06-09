@@ -162,11 +162,13 @@ python test.py \
 If you find Hyp-OC useful for your research, please consider citing us:
 
 ```bibtex
-@article{narayan2024hyp,
-  title={Hyp-OC: Hyperbolic One Class Classification for Face Anti-Spoofing},
+@inproceedings{narayan2024hyp,
+  title={Hyp-oc: Hyperbolic one class classification for face anti-spoofing},
   author={Narayan, Kartik and Patel, Vishal M},
-  journal={arXiv preprint arXiv:2404.14406},
-  year={2024}
+  booktitle={2024 IEEE 18th International Conference on Automatic Face and Gesture Recognition (FG)},
+  pages={1--10},
+  year={2024},
+  organization={IEEE}
 }
 ```
 ## Acknowledgement
