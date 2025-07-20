@@ -116,6 +116,7 @@ The directory structure should finally be:
 
 ```
   . ── hyp-oc ──┌── pretrained_weights/vgg_face_dag.pth
+                ├── weights/ ...                
                 ├── data
                 ├── hyptorch
                 ├── config.py
