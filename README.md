@@ -103,6 +103,14 @@ The pre-traind model can be downloaded manually from [HuggingFace](https://huggi
 from huggingface_hub import hf_hub_download
 
 hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="pretrained_weights/vgg_face_dag.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/CASIA_MFSD/casia_mfsd/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/OULU_NPU/oulu_npu/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/ROSEYoutu/rose_youtu/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/ReplayAttack/replayattack/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/ICM/icm/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/OCI/oci/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/OCM/ocm/best_epoch.pth", local_dir="./")
+hf_hub_download(repo_id="kartiknarayan/hyp-oc", filename="weights/OMI/omi/best_epoch.pth", local_dir="./")
 ```
 The directory structure should finally be:
 
